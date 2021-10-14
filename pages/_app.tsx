@@ -5,7 +5,7 @@ import '../styles/globals.css';
 
 function MainApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class" storageKey="lofasz">
+    <ThemeProvider attribute="class">
       <div className="absolute top-1 right-1">
         <ThemeColorChangeButton />
       </div>
