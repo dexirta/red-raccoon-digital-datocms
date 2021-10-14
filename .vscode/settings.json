@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "html.format.enable": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
+}
