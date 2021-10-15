@@ -2,7 +2,10 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+const NextApi = (req: NextApiRequest, res: NextApiResponse) => {
+  console.log(req, res);
   // BY default get request
   // res.status(200).json({ services });
 };
+
+export default NextApi;

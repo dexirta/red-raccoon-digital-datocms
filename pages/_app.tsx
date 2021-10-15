@@ -1,11 +1,12 @@
+import ThemeColorChangeButton from '@components/ThemeColorChangeButton';
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/dist/shared/lib/router/router';
-import ThemeColorChangeButton from '../components/ThemeColorChangeButton';
+import React from 'react';
 import '../styles/globals.css';
 
 function MainApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <div className="absolute top-1 right-1">
         <ThemeColorChangeButton />
       </div>
