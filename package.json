@@ -8,6 +8,7 @@
     "build:static": "next build && next export",
     "start": "next start",
     "lint": "next lint",
+    "pre-commit": "lint-staged",
     "postbuild": "next-sitemap",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "postinstall": "husky install && graphql-codegen",
