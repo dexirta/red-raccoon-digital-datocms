@@ -19,7 +19,8 @@
     "import/resolver": {
       "alias": [
         ["@components", "components/"],
-        ["@components/*", "components/*"]
+        ["@components/*", "components/*"],
+        ["@lib/*", "lib/*"]
       ]
     }
   }

@@ -1,0 +1,20 @@
+.btn {
+  position: relative;
+}
+
+.btn > .circleSvg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.circle {
+  stroke-dasharray: 301.59px;
+  stroke-dashoffset: 301.59px;
+  transition: all 0.8s;
+  transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
+}
+
+.btn:hover .circle {
+  stroke-dashoffset: 0;
+}

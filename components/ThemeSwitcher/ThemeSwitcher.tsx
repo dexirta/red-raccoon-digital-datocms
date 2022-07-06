@@ -1,22 +1,28 @@
+import styles from '@components/ThemeSwitcher/ThemeSwitcher.module.css';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-const ThemeColorChangeButton = () => {
+export const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
   const changeTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
+  const themeColors = theme === 'dark' ? 'white' : 'url(#linear-gradient)';
+
   const renderBtn = () => {
     if (!mounted) return null;
     return (
       <button
         type="button"
-        title="Switch theme"
+        title={theme === 'dark' ? 'Light mode' : 'Raccoon mode'}
         onClick={changeTheme}
-        className="bg-transparent m-1 p-1 rounded-full hover:border-raccoonred-lightest border border-opacity-0 dark:hover:border-gray-50"
+        className={`bg-transparent m-1 p-1 ${styles.btn}`}
       >
+        <svg className={styles.circleSvg} width="40" height="40" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle className={styles.circle} cx="50" cy="50" r="48" stroke={themeColors} strokeWidth="3" fill="none" />
+        </svg>
         <svg className="h-8 w-8 " fill="none" viewBox="0 0 512 512" stroke="currentColor">
           <linearGradient id="linear-gradient" gradientUnits="userSpaceOnUse" x2="0%" y2="100%">
             <stop offset="10%" stopColor="#EE4540" />
@@ -25,8 +31,7 @@ const ThemeColorChangeButton = () => {
             <stop offset="100%" stopColor="#510A32" />
           </linearGradient>
           <path
-            id="gradient"
-            fill={theme === 'dark' ? 'white' : 'url(#linear-gradient)'}
+            fill={themeColors}
             d="M511.192,243.608l-14.804-31.053c-1.532-5.375-10.884-36.246-28.622-55.018v-16.519c0-2.848-1.461-5.496-3.869-7.014
 			c-2.409-1.519-5.427-1.696-7.996-0.47c-8.212,3.919-15.605,10.163-21.758,16.934c-22.119,0.572-40.255,6.381-46.371,8.58
 			l-58.124-8.303c-7.295-4.264-36.571-19.038-91.492-18.018c-50.66,0.921-85.086,36.283-93.057,45.307
@@ -78,5 +83,3 @@ const ThemeColorChangeButton = () => {
 
   return <>{renderBtn()}</>;
 };
-
-export default ThemeColorChangeButton;

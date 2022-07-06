@@ -1,0 +1,10 @@
+{
+  "name": "Red Raccoon Digital CMS",
+  "description": "Raccoons everywhere",
+  "previewImage": "",
+  "datocmsProjectId": "57307",
+  "deploymentType": "static",
+  "buildCommand": "npm run build",
+  "datocmsApiTokenEnvName": "a82fbe8f62ca8e6a62779289db17b2",
+  "livePreviewUrl": "https://red-raccoon-digital.vercel.app/"
+}

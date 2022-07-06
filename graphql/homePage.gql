@@ -1,0 +1,6 @@
+query homePage($locale: SiteLocale = en) {
+  homepage(locale: $locale) {
+    id
+    heading(locale: $locale)
+  }
+}
